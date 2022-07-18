@@ -20,7 +20,7 @@ useful if you wanna look at your map on 30+ turn
 - it opens a chat window
   *solution*: ignore this, this's a normal behavior
 - from time to time activated D2TurnSkipper opens a settings window in the Game
-  *solution*: wait for 5 seconds then it should close a settings windows, otherwise, press `Esc`
+  *solution*: wait for 5 seconds then it should close a settings windows, otherwise, press `Esc` or change delay [here](https://github.com/hobayoba/D2TurnSkipper/blob/main/AutoTurnSkipper.py#L7) and restart D2TurnSkipper
 
 ------
 # Thanks

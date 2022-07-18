@@ -5,12 +5,22 @@ useful if you wanna look at your map on 30+ turn
 # Setup
 1) install python v3.8+ https://www.python.org/downloads/
 2) install the following dependencies using `cmd.exe`: `pip install pyautogui pynput keyboard`
-3) clone this repo to C:\my_dir
-3) run D2TurnSkipper using `cmd.exe`: `python C:\my_dir\AutoTurnSkipper.py`
+3) clone this repo to `C:\example`
+
+# Run:
+1) run your map in Disciples 2 and disable the following options in settings:
+- show end-of-turn confirmation message
+- show enemy actions
+- always show results
+2) open `cmd.exe` and run D2TurnSkipper: `python C:\example\AutoTurnSkipper.py`
+3) return to Disciples 2 and press F7
+4) press F8 to pause D2TurnSkipper. ATTENTION: always wait while D2TurnSkipper complete clicks. it takes about 5-10 seconds after pressing F8.
 
 # Known issues
-- from time to time it opens a settings window  
-  *solution*: wait for 5 seconds then it should to close a settings windows itself, otherwise, press `Esc`
+- it opens a chat window
+  *solution*: ignore this, this's a normal behavior
+- from time to time activated D2TurnSkipper opens a settings window in the Game
+  *solution*: wait for 5 seconds then it should close a settings windows, otherwise, press `Esc`
 
 ------
 # Thanks

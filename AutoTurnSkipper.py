@@ -33,13 +33,15 @@ def display_controls():
 
 def skip_turn():
     pyautogui.click(pyautogui.position())
-    time.sleep(0.3)
+    time.sleep(0.2)
     pyautogui.click(pyautogui.position())
-    time.sleep(0.3)
+    time.sleep(0.2)
     keyboard.press('i')
+    time.sleep(0.1)
     keyboard.press('enter')
-    time.sleep(0.3)
+    time.sleep(0.2)
     keyboard.press('esc')
+    time.sleep(0.05)
     keyboard.press('space')
 
 def main():

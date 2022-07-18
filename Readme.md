@@ -14,7 +14,9 @@ useful if you wanna look at your map on 30+ turn
 - always show results
 2) open `cmd.exe` and run D2TurnSkipper: `python C:\example\AutoTurnSkipper.py`
 3) return to Disciples 2 and press F7
-4) press F8 to pause D2TurnSkipper. ATTENTION: always wait while D2TurnSkipper complete clicks. it takes about 5-10 seconds after pressing F8.
+4) press F8 to pause D2TurnSkipper 
+
+ATTENTION: always wait while D2TurnSkipper complete its clicks. it takes about 5-10 seconds after pressing F8.
 
 # Known issues
 - it opens a chat window

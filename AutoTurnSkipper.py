@@ -1,19 +1,18 @@
 import pyautogui
 from pynput.keyboard import *
 import keyboard
+import time
 
 #  ======== settings ========
-delay = 2  # in seconds
+delay = 3  # in seconds
 resume_key = Key.f7
 pause_key = Key.f8
-#exit_key = Key.esc
 #  ==========================
 
 pause = True
-running = True
 
 def on_press(key):
-    global running, pause
+    global pause
 
     if key == resume_key:
         pause = False
@@ -21,13 +20,9 @@ def on_press(key):
     elif key == pause_key:
         pause = True
         print("[Paused]")
-#    elif key == exit_key:
-#        running = False
-#        print("[Exit]")
-
 
 def display_controls():
-    print("// AutoTurnSkipper for Disciples 2 that emulates 2 mouse clicks and one spacebar press to close info dialogs and skip a turn")
+    print("// D2TurnSkipper for Disciples 2")
     print("// - Settings: ")
     print("\t delay = " + str(delay) + ' sec' + '\n')
     print("// - Controls:")
@@ -36,22 +31,26 @@ def display_controls():
     print("-----------------------------------------------------")
     print('Press F7 to start ...')
 
+def skip_turn():
+    pyautogui.click(pyautogui.position())
+    time.sleep(0.3)
+    pyautogui.click(pyautogui.position())
+    time.sleep(0.3)
+    keyboard.press('i')
+    keyboard.press('enter')
+    time.sleep(0.3)
+    keyboard.press('esc')
+    keyboard.press('space')
 
 def main():
     lis = Listener(on_press=on_press)
     lis.start()
 
     display_controls()
-    while running:
+    pyautogui.PAUSE = delay
+    while True:
         if not pause:
-            pyautogui.click(pyautogui.position())
-            pyautogui.click(pyautogui.position())
-            keyboard.press('enter')
-            keyboard.press('enter')
-            keyboard.press('enter')
-            keyboard.press('esc')
-            keyboard.press('space')
-            pyautogui.PAUSE = delay
+            skip_turn()
     lis.stop()
 
 

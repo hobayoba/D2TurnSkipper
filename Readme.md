@@ -8,6 +8,12 @@ useful if you wanna look at your map on 30+ turn
 3) clone this repo to C:\my_dir
 3) run D2TurnSkipper using `cmd.exe`: `python C:\my_dir\AutoTurnSkipper.py`
 
+# Known issues
+- from time to time it opens a settings window  
+  *solution*: wait for 5 seconds then it should to close a settings windows itself, otherwise, press `Esc`
+
 ------
-Thanks for an idea and for the source code to @isaychris  
+# Thanks
+thanks for an idea and for the source code to @isaychris  
 https://github.com/isaychris/python-autoclicker
+

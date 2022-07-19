@@ -2,6 +2,7 @@ import pyautogui
 from pynput.keyboard import *
 import keyboard
 import time
+import psutil
 
 #  ======== settings ========
 delay = 4  # in seconds
@@ -10,6 +11,7 @@ pause_key = Key.f8
 #  ==========================
 
 pause = True
+auto_pause_printed = False
 
 def on_press(key):
     global pause
@@ -45,14 +47,22 @@ def skip_turn():
     keyboard.press('space')
 
 def main():
+    global auto_pause_printed
+
     lis = Listener(on_press=on_press)
     lis.start()
 
     display_controls()
     pyautogui.PAUSE = delay
     while True:
-        if not pause:
+        dis2_processes = len(list(filter(lambda x: str(x.name()).lower() == 'discipl2.exe', psutil.process_iter())))
+        if not pause and dis2_processes > 0:
             skip_turn()
+            auto_pause_printed = False
+        elif dis2_processes == 0 and not auto_pause_printed and not pause:
+            print('[Info]: Game is not running, so')
+            auto_pause_printed = True
+            keyboard.press('f8')
     lis.stop()
 
 

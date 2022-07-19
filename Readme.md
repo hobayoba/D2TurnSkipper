@@ -4,7 +4,7 @@ useful if you wanna look at your map on 30+ turn
 
 # Setup
 1) install python v3.8+ https://www.python.org/downloads/
-2) install the following dependencies using `cmd.exe`: `pip install pyautogui pynput keyboard`
+2) install the following dependencies using `cmd.exe`: `pip install pyautogui pynput keyboard psutil`
 3) clone this repo to `C:\example`
 
 # Run:

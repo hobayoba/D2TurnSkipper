@@ -1,6 +1,6 @@
 # D2TurnSkipper
-just a small script to automate turns skipping in Disciples 2.
-useful for cases when you wanna test what happen on your map on 30+ turn.
+just a small script to automate turns skipping in Disciples 2.  
+useful in cases to see what happen on a map on 30+ turn.  
 
 # Setup
 1) install python v3.8+ https://www.python.org/downloads/
@@ -26,6 +26,6 @@ useful for cases when you wanna test what happen on your map on 30+ turn.
 
 ------
 # Thanks
-Many thanks for an idea and for the source code to [@isaychris](https://github.com/isaychris)
+Many thanks for an idea and for the source code to [@isaychris](https://github.com/isaychris)  
 https://github.com/isaychris/python-autoclicker
 

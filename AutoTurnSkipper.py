@@ -11,17 +11,18 @@ pause_key = Key.f8
 #  ==========================
 
 pause = True
+pause_printed = False
 auto_pause_printed = False
 
 def on_press(key):
-    global pause
+    global pause, pause_printed
 
     if key == resume_key:
         pause = False
         print("[Resumed]")
     elif key == pause_key:
         pause = True
-        print("[Paused]")
+        pause_printed = False
 
 def display_controls():
     print("// D2TurnSkipper for Disciples 2")
@@ -47,7 +48,7 @@ def skip_turn():
     keyboard.press('space')
 
 def main():
-    global auto_pause_printed
+    global auto_pause_printed, pause_printed
 
     lis = Listener(on_press=on_press)
     lis.start()
@@ -63,8 +64,12 @@ def main():
             print('[Info]: Game is not running, so')
             auto_pause_printed = True
             keyboard.press('f8')
+        elif pause and not pause_printed:
+            print('[Paused]')
+            pause_printed = True
     lis.stop()
 
 
 if __name__ == "__main__":
     main()
+

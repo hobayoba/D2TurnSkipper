@@ -4,7 +4,7 @@ import keyboard
 import time
 
 #  ======== settings ========
-delay = 1  # in seconds
+delay = 2  # in seconds
 resume_key = Key.f7
 pause_key = Key.f8
 #  ==========================
@@ -33,12 +33,15 @@ def display_controls():
 
 def skip_turn():
     pyautogui.click(pyautogui.position())
+    time.sleep(0.5)
     pyautogui.click(pyautogui.position())
+    time.sleep(0.5)
     keyboard.press('i')
-    time.sleep(0.1)
+    time.sleep(0.3)
     keyboard.press('enter')
-    time.sleep(0.1)
+    time.sleep(0.5)
     keyboard.press('esc')
+    time.sleep(0.1)
     keyboard.press('space')
 
 def main():

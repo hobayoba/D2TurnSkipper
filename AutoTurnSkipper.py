@@ -40,7 +40,6 @@ def skip_turn():
     time.sleep(0.3)
     keyboard.press('enter')
     time.sleep(1)
-    print('shit')
     keyboard.press('esc')
     time.sleep(0.1)
     keyboard.press('space')

@@ -13,16 +13,16 @@ useful if you wanna look at your map on 30+ turn
 - show enemy actions
 - always show results
 2) open `cmd.exe` and run D2TurnSkipper: `python C:\example\AutoTurnSkipper.py`
-3) return to Disciples 2, set game speed to 1.5x (this's max value!) and press F7
+3) return to Disciples 2, set max game speed to 3x if it's possible and press F7
 4) press F8 to pause D2TurnSkipper 
 
 ATTENTION: always wait while D2TurnSkipper complete its clicks. it takes about 5-10 seconds after pressing F8.
 
 # Known issues
-- it opens a chat window
-  *solution*: ignore this, this's a normal behavior
+- it opens a chat window!
+  *solution*: ignore this, it's a normal behavior
 - from time to time activated D2TurnSkipper opens a settings window in the Game
-  *solution*: wait for 5 seconds then it should close a settings windows, otherwise, press `Esc` or change delay [here](https://github.com/hobayoba/D2TurnSkipper/blob/main/AutoTurnSkipper.py#L7) and restart D2TurnSkipper
+  *solution*: wait for 5 seconds then it should close a settings windows, otherwise, press `Esc`
 
 ------
 # Thanks

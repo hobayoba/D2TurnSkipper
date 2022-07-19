@@ -4,7 +4,7 @@ import keyboard
 import time
 
 #  ======== settings ========
-delay = 2  # in seconds
+delay = 3  # in seconds
 resume_key = Key.f7
 pause_key = Key.f8
 #  ==========================
@@ -39,7 +39,7 @@ def skip_turn():
     keyboard.press('i')
     time.sleep(0.3)
     keyboard.press('enter')
-    time.sleep(0.5)
+    time.sleep(1)
     keyboard.press('esc')
     time.sleep(0.1)
     keyboard.press('space')
